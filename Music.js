@@ -1,7 +1,7 @@
  const display = document.getElementById("display");
 
 
- display.value = "Edmund Hogg";
+ display.value = "Edmund Hogg Music";
 
 function TikTok(){
   window.open('https://www.tiktok.com/@machinehum', '_self');
