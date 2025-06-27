@@ -15,7 +15,7 @@ function YouTube(){
   window.open('https://www.youtube.com/@MachineHum', '_self');
 }
 
-function Home(){
+function Back(){
   window.open('https://edhogg12.github.io/My-Public-Websight/', '_self');
 }
 
