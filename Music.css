@@ -124,7 +124,7 @@ body{
 }
 
 
-.Home{
+.Back{
     width: 180px;
     height: 080px;
     border: none;
@@ -138,9 +138,9 @@ body{
     top: 780px;
     right: 200px;
 }
-.Home:hover{
+.Back:hover{
     background-color:rgb(22, 61, 34);
 }
-.Home:active{
+.Back:active{
     background-color:rgb(28, 73, 42);
 }
