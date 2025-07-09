@@ -8,7 +8,7 @@ function TikTok(){
 }
 
 function Instagram(){
-  window.open('file:///C:/Users/Edmund/OneDrive/Desktop/coding/My%20Websight/Home/Projects.html', '_self');
+  window.open('https://www.instagram.com/machinehum_/', '_self');
 }
 
 function YouTube(){
@@ -17,8 +17,4 @@ function YouTube(){
 
 function Back(){
   window.open('https://edhogg12.github.io/My-Public-Websight/', '_self');
-}
-
-function Goto12(){
-  window.open('https://www.chess.com/play', '_blank');
 }
