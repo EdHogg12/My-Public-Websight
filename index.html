@@ -5,19 +5,100 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="index.css">
-        <link rel="icon" href="logo" type="image/png">
+        <link rel="icon" href="ire.png" type="image/png"> 
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Home.css">
+    <link rel="icon" href="ire.png" type="image/png"> 
+</head>
     </head>
     <body>
-        <div id="Home">
-          <input id="display" readonly>
-        <div id="buttons">
-            <button class=Music onclick="Music()">Music</button>
-            </button>
-            </div>
-        </div>
 
-        <script
-            src="index.js">
-        </script>
+<header class="navbar">
+    <div class="container">
+        <nav>
+<ul>
+<li>
+    <button type="button" class="TikTok" onclick="GotoTikTok()">
+        <span class="tiktok-highlight">
+            <img src="tiktok.png" alt="TikTok" style="height:24px; vertical-align:middle;">
+            TikTok
+        </span>
+    </button>
+</li>
+    <li>
+        <button type="button" class="Youtube" onclick="GotoYoutube()">
+            <img src="youtube.png" alt="YouTube" style="height:24px; vertical-align:middle;">
+            YouTube
+        </button>
+    </li>
+    <li>
+        <button type="button" class="Instagram" onclick="GotoInstagram()">
+            <img src="instagram.png" alt="Instagram" style="height:24px; vertical-align:middle;">
+            Instagram
+        </button>
+    </li>
+
+
+                <li class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">More ↓</button>
+
+                    <div id="moreDropdown" class="dropdown-content">
+                        <a href="#" onclick="GotoSpotify()">
+                            <img src="spotify.png" alt="Spotify" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                                                <a href="#" onclick="GotoApplemusic()">
+                            <img src="applemusic.png" alt="applemusic" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                                                <a href="#" onclick="Gotosoundcloud()">
+                            <img src="soundcloud.png" alt="soundcloud" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                    </div>
+                </li>
+</ul>
+        </nav>
+    </div>
+</header>
+
+<div class="text-container">
+    <h1 class="animated-text">MACHINE HUM</h1>
+</div>
+
+
+ <section id="about-section" class="content-section">
+            <h2>Welcome Machine Hum</h2>
+            <p>
+               Explore the world of Machine Hum. This is a space dedicated to sharing the latest updates, music releases, and insights.
+            </p>
+        </section>
+
+ <section id="Come-Back" class="Come-Back">
+     <img src="Come Back.jpg" alt="A descriptive alt text for your image" class="section-image">
+            <h2>New Realease!</h2>
+            <h2>Come Back - Single</h2>
+            <p>
+               "Come Back" is a heartfelt single that captures the essence of longing and nostalgia. The song's emotive lyrics and captivating keyboard are meant to evoke feelings of nostalgic loss.
+            </p>
+            <p>
+                Out soon on all platforms!
+            </p>
+        </section>
+
+
+
+
+        <script src="index.js"></script>
+
+
     </body>
 </html>
