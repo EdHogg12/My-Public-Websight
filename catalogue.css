@@ -1,0 +1,451 @@
+/* ========================================= */
+/* 1. CSS Variables and Base Styling */
+/* ========================================= */
+
+:root {
+    /* Color Palette */
+    --background-color: #121212;
+    --navbar-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color-green: #69923e;
+    --accent-color-red: #752f2f;
+    --button-bg-color: #333;
+    --button-hover-bg-color: #444;
+    --button-active-bg-color: #222;
+}
+
+/* Base styling for the whole page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* ========================================= */
+/* 2. Navbar Styling */
+/* ========================================= */
+
+.navbar {
+    background-color: var(--navbar-bg-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    padding: 15px 0;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar nav ul li {
+    margin: 0 10px;
+}
+
+/* Styles for the "Machine Hum" text link */
+.navbar-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: 'Cinzel', serif;
+}
+
+.navbar-text a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-text a:hover {
+    opacity: 0.8;
+}
+
+/* ========================================= */
+/* 3. Main Content Sections & Animations */
+/* ========================================= */
+
+main {
+    display: block;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#Home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: -30px;
+    margin-bottom: 0;
+}
+
+.logo {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.logo.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin-top: 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.animated-text.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section,
+.Come-Back {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.content-section h2,
+.Come-Back h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-section p,
+.Come-Back p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.section-image {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+}
+
+/* ========================================= */
+/* 4. Button Styling */
+/* ========================================= */
+
+.navbar button,
+.main-button {
+    border: 1px solid #222;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    padding: 15px 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar button:hover,
+.main-button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: translateY(-2px);
+}
+
+.navbar button:active,
+.main-button:active {
+    background-color: var(--button-active-bg-color);
+    transform: translateY(0);
+}
+
+/* Individual button styles for hover effects */
+.navbar .TikTok:hover,
+.main-button.TikTok:hover {
+    background-color: #0b1d33;
+    color: #fff;
+    border: 1px solid #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.navbar .Music:hover,
+.main-button.Music:hover {
+    background-color: #4b6e58;
+    transform: translateY(-2px);
+}
+
+.navbar .Projects:hover,
+.main-button.Projects:hover {
+    background-color: #4c4c66;
+    transform: translateY(-2px);
+}
+
+.navbar .Notes:hover,
+.main-button.Notes:hover {
+    background-color: #66504a;
+    transform: translateY(-2px);
+}
+
+.navbar .Youtube:hover,
+.main-button.Youtube:hover {
+    background-color: var(--accent-color-red);
+    transform: translateY(-2px);
+}
+
+.navbar .Chess:hover,
+.main-button.Chess:hover {
+    background-color: var(--accent-color-green);
+    transform: translateY(-2px);
+}
+
+.navbar .Instagram:hover,
+.main-button.Instagram:hover {
+    background-color: #be7f1f;
+    transform: translateY(-2px);
+}
+
+.navbar .Spotify:hover,
+.main-button.Spotify:hover {
+    background-color: #124223;
+    transform: translateY(-2px);
+}
+
+.navbar .Youtube span {
+    font-weight: bold;
+}
+
+/* ========================================= */
+/* 5. Dropdown Styling */
+/* ========================================= */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.dropbtn {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 12px 20px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.dropbtn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    margin-top: -1px;
+    top: 100%;
+    left: 0;
+    padding: 10px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #444;
+}
+
+/* ========================================= */
+/* 6. Audio Player Styling */
+/* ========================================= */
+
+.audio-player {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--button-bg-color);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.audio-player .controls {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 15px;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.track-info #track-name {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.album-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+#custom-audio-player .play-btn {
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#custom-audio-player .play-btn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.play-btn .icon {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+.play-btn .icon.hidden {
+    display: none;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--text-color);
+    border-radius: 4px;
+}
+
+audio {
+    display: none;
+}
+
+/* ========================================= */
+/* 7. Responsive Design */
+/* ========================================= */
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0;
+    }
+
+    .navbar button,
+    .main-button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+.navbar2 {
+    background-color: var(--background-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+}
+
+.navbar2 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}

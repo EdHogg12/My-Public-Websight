@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="catalogue.css">
+        <link rel="icon" href="ire.png" type="image/png"> 
+        <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Home.css">
+    <link rel="icon" href="ire.png" type="image/png"> 
+</head>
+    </head>
+    <body>
+
+<header class="navbar">
+    <div class="container">
+          <div class="navbar-text">
+                <a href="index.html">
+            <span>Machine Hum</span>
+            </a>
+        </div>
+        <nav>
+<ul>
+<li>
+    <button type="button" class="TikTok" onclick="GotoTikTok()">
+        <span class="tiktok-highlight">
+            <img src="tiktok.png" alt="TikTok" style="height:24px; vertical-align:middle;">
+            TikTok
+        </span>
+    </button>
+</li>
+    <li>
+        <button type="button" class="Youtube" onclick="GotoYoutube()">
+            <img src="youtube.png" alt="YouTube" style="height:24px; vertical-align:middle;">
+            YouTube
+        </button>
+    </li>
+    <li>
+        <button type="button" class="Instagram" onclick="GotoInstagram()">
+            <img src="instagram.png" alt="Instagram" style="height:24px; vertical-align:middle;">
+            Instagram
+        </button>
+    </li>
+
+
+                <li class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">More ↓</button>
+
+                    <div id="moreDropdown" class="dropdown-content">
+                        <a href="#" onclick="GotoSpotify()">
+                            <img src="spotify.png" alt="Spotify" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                                                <a href="#" onclick="GotoApplemusic()">
+                            <img src="applemusic.png" alt="applemusic" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                                                <a href="#" onclick="Gotosoundcloud()">
+                            <img src="soundcloud.png" alt="soundcloud" style="height:24px; vertical-align:middle;">
+                            Coming Soon...
+                        </a>
+                    </div>
+                </li>
+</ul>
+        </nav>
+           <div class="navbar-spacer"></div>
+    </div>
+</header>
+
+
+
+<header class="navbar2">
+    <div class="container">
+        <div class="text-container">
+            <h1 class="animated-text">MACHINE HUM CATALOGUE</h1>
+        </div>
+    </div>
+</header>
+
+
+
+
+
+
+
+<div id="custom-audio-player" class="audio-player">
+  <audio id="audio-file" src="come_back9.flac"></audio>
+
+  <img src="Come Back.jpg" alt="Album Art" class="album-art">
+
+  <div class="track-info">
+      <span id="track-name">Come Back</span>
+  </div>
+
+  <div class="controls">
+    <button id="play-pause-btn" class="play-btn">
+      <svg id="play-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon" style="transform: translateX(2px);">
+        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+      </svg>
+      <svg id="pause-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon hidden">
+        <rect x="6" y="4" width="4" height="16"></rect>
+        <rect x="14" y="4" width="4" height="16"></rect>
+      </svg>
+    </button>
+    <div id="progress-bar-container" class="progress-bar-container">
+      <div id="progress-bar" class="progress-bar"></div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+        <script src="catalogue.js"></script>
+
+
+    </body>
+</html>
