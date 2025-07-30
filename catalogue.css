@@ -123,9 +123,9 @@ main {
 
 .animated-text {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(15px);
     transition: opacity 1s ease, transform 1s ease;
-    margin-top: 30px;
+    margin-top: 5px;
     font-family: 'Cinzel', serif;
     font-size: 3rem;
     font-weight: 700;
@@ -144,7 +144,7 @@ main {
 .content-section,
 .Come-Back {
     max-width: 500px;
-    margin: 100px auto;
+    margin: 00px auto;
     padding: 20px;
     background-color: #222;
     border-radius: 12px;
@@ -418,9 +418,7 @@ audio {
 /* ========================================= */
 
 @media (max-width: 600px) {
-    .navbar .container {
-        flex-direction: column;
-    }
+
 
     .navbar nav ul li {
         margin: 5px 0;
@@ -431,6 +429,7 @@ audio {
         width: 100%;
         margin-left: 0;
     }
+
 }
 
 
@@ -438,7 +437,7 @@ audio {
     background-color: var(--background-color);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: auto;
+    height: 110px;
 }
 
 .navbar2 .container {
@@ -449,3 +448,81 @@ audio {
     margin: 0 auto;
     padding: 15px 20px;
 }
+
+
+/* Update the font size for the text inside the container */
+.support-me-container h3 {
+    font-size: 14px; /* Adjust this value to your liking */
+    margin: 0;
+}
+
+.support-me-container h4 {
+    font-size: 13px; /* Adjust this value to make it smaller than the line above */
+    margin: 0;
+}
+
+/* Style the container to look like a button */
+.support-me-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 50px;
+    background-color: #333;
+    color: var(--text-color);
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Adjust spacing as needed */
+}
+
+/* Add a hover effect to make it feel clickable */
+.support-me-container:hover {
+    background-color: #444;
+}
+
+/* Update this rule in your CSS file */
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* Pushes the logo to the left, spacer to the right */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* This rule gives the spacer the same width as the logo to balance the layout */
+.navbar-spacer {
+    width: 10rem; /* This should match the font-size of your logo */
+}
+
+/* Update this rule in your CSS file */
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* This is the key change */
+    align-items: center;
+    width: 100%; /* Ensures the list stretches the full width */
+}
+
+/* Update this rule in your CSS file */
+.navbar nav ul li {
+    margin: 0 10px;
+}
+
+/* Ensure the navbar-text has no button styling */
+.navbar nav ul li.navbar-text {
+    margin: 0;
+}
+
+.navbar .navbar-text a span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: 'Cinzel', serif;
+}
+
+
