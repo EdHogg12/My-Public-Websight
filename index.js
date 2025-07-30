@@ -20,6 +20,9 @@ function Gotosoundcloud() {
 function GotoMore() {
     window.location.href = "more.html";
 }
+function GotoCatalogue() {
+    window.location.href = "catalogue.html";
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = document.querySelector('.animated-text');
@@ -44,3 +47,32 @@ window.onclick = function(event) {
         }
     }
 }
+
+
+/* Add this to your existing index.js file */
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements with the class 'section-pop-out'
+    const sections = document.querySelectorAll('.section-pop-out');
+
+    // Create a new IntersectionObserver
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            // If the section is intersecting the viewport
+            if (entry.isIntersecting) {
+                // Add the 'visible' class to trigger the animation
+                entry.target.classList.add('visible');
+                // Stop observing the section to prevent re-animating
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        // This is the options object. The threshold is how much of the element 
+        // must be visible before the callback is executed.
+        threshold: 0.1 
+    });
+
+    // Loop through each section and tell the observer to watch it
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
