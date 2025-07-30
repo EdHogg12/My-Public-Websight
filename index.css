@@ -4,14 +4,14 @@
 
 :root {
     /* Color Palette */
-    --background-color: #121212;   /* Dark, modern background */
-    --navbar-bg-color: #1e1e1e;    /* Slightly lighter dark for the navbar */
-    --text-color: #e0e0e0;         /* Light grey for most text */
-    --accent-color-green: #69923e; /* Your existing green accent */
-    --accent-color-red: #752f2f;   /* A clean red for YouTube */
-    --button-bg-color: #333;       /* Button background color */
-    --button-hover-bg-color: #444; /* Button hover background */
-    --button-active-bg-color: #222;/* Button active background */
+    --background-color: #121212;
+    --navbar-bg-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent-color-green: #69923e;
+    --accent-color-red: #752f2f;
+    --button-bg-color: #333;
+    --button-hover-bg-color: #444;
+    --button-active-bg-color: #222;
 }
 
 /* Base styling for the whole page */
@@ -25,21 +25,22 @@ body {
 }
 
 /* ========================================= */
-/* 2. Navbar and Header Styling */
+/* 2. Navbar Styling */
 /* ========================================= */
 
 .navbar {
     background-color: var(--navbar-bg-color);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* More pronounced shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     width: 100%;
-    padding: 15px 0; /* Increased padding */
+    padding: 15px 0;
 }
 
 .navbar .container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: center; /* Center the navigation buttons */
+    /* This is the key. It separates the logo from the nav buttons. */
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
@@ -49,18 +50,35 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Allows buttons to wrap on small screens */
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .navbar nav ul li {
-    margin: 0 10px; /* Space between the buttons */
+    margin: 0 10px;
+}
+
+/* New CSS rules to style the "Machine Hum" text as a link */
+.navbar-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: 'Cinzel', serif;
+}
+
+.navbar-text a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-text a:hover {
+    opacity: 0.8;
 }
 
 /* ========================================= */
-/* 3. Central Content and Display */
+/* 3. Main Content Sections */
 /* ========================================= */
-
 
 main {
     display: block;
@@ -79,115 +97,30 @@ main {
 #display {
     width: 100%;
     padding: 30px;
-    font-size: 3rem; /* Adjusted font size for better balance */
+    font-size: 3rem;
     text-align: center;
     border: 2px solid var(--accent-color-green);
     border-radius: 12px;
     background-color: #0d0d0d;
     color: var(--text-color);
     font-weight: bold;
-    box-sizing: border-box; /* Ensures padding is included in the element's total width */
-    margin-bottom: 20px; /* Space below the display */
+    box-sizing: border-box;
+    margin-bottom: 20px;
 }
-
-/* ========================================= */
-/* 4. Consolidated & Refined Button Styling */
-/* ========================================= */
-
-/* General button styling - all buttons share this */
-.navbar button,
-.main-button {
-    /* Removed redundant width/height from individual selectors */
-    border: none;
-    background-color: var(--button-bg-color);
-    color: var(--text-color);
-    padding: 15px 25px; /* Consistent padding */
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer; /* Correct spelling */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.navbar button:hover,
-.main-button:hover {
-    background-color: var(--button-hover-bg-color);
-    transform: translateY(-2px); /* Lift effect */
-}
-
-.navbar button:active,
-.main-button:active {
-    background-color: var(--button-active-bg-color);
-    transform: translateY(0);
-}
-
-/* Individual button styles for hover effects */
-.navbar .Music:hover,
-.main-button.Music:hover {
-    background-color: #4b6e58; /* A shade of green */
-}
-
-.navbar .Projects:hover,
-.main-button.Projects:hover {
-    background-color: #4c4c66; /* A shade of purple/blue */
-}
-
-.navbar .Notes:hover,
-.main-button.Notes:hover {
-    background-color: #66504a; /* A shade of brown/rust */
-}
-
-.navbar .Youtube:hover,
-.main-button.Youtube:hover {
-    background-color: var(--accent-color-red);
-}
-
-.navbar .Chess:hover,
-.main-button.Chess:hover {
-    background-color: var(--accent-color-green);
-}
-
-.navbar .Youtube span {
-    font-weight: bold;
-}
-
-/* ========================================= */
-/* 5. Responsive Design */
-/* ========================================= */
-
-@media (max-width: 600px) {
-    .navbar .container {
-        flex-direction: column; /* Stack buttons vertically on small screens */
-    }
-
-    .navbar nav ul li {
-        margin: 5px 0; /* Add vertical space between stacked buttons */
-    }
-
-    .navbar button,
-    .main-button {
-        width: 100%; /* Make buttons full width */
-        margin-left: 0;
-    }
-}
-
-
 
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    margin-top: -30px;   /* 300px from the top */
+    margin-top: -30px;
     margin-bottom: 0;
 }
 
 .logo {
     user-select: none;
-    -webkit-user-select: none; /* For Safari */
-    -moz-user-select: none;    /* For Firefox */
-    -ms-user-select: none;     /* For IE/Edge */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     display: block;
     max-width: 300px;
     width: 100%;
@@ -198,11 +131,77 @@ main {
     transition: opacity 1s ease, transform 1s ease;
 }
 
-
 .logo.loaded {
     opacity: 1;
     transform: translateY(0);
 }
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+    margin-top: 30px;
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.animated-text.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section,
+.Come-Back {
+    max-width: 500px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.content-section h2,
+.Come-Back h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content-section p,
+.Come-Back p {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+.section-image {
+    max-width: 20%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin: 0 auto 20px auto;
+}
+
+/* ========================================= */
+/* 4. Button Styling */
+/* ========================================= */
 
 .navbar button,
 .main-button {
@@ -219,24 +218,27 @@ main {
     letter-spacing: 1px;
 }
 
-#Home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
+.navbar button:hover,
+.main-button:hover {
+    background-color: var(--button-hover-bg-color);
+    transform: translateY(-2px);
 }
 
+.navbar button:active,
+.main-button:active {
+    background-color: var(--button-active-bg-color);
+    transform: translateY(0);
+}
+
+/* Individual button styles for hover effects */
 .navbar .TikTok:hover,
 .main-button.TikTok:hover {
-    background-color: #0b1d33; /* Dark blue */
+    background-color: #0b1d33;
     color: #fff;
     border: 1px solid #222;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
     transition: background 0.3s, box-shadow 0.3s;
 }
-
-
 
 .navbar .Music:hover,
 .main-button.Music:hover {
@@ -276,52 +278,24 @@ main {
 
 .navbar .Spotify:hover,
 .main-button.Spotify:hover {
-    background-color: #124223; /* Spotify green */
+    background-color: #124223;
     transform: translateY(-2px);
 }
 
-.text-container {
-    display: flex;
-    justify-content: center; /* This centers the item horizontally */
-    height: 300px;
-    width: 100%;
+.navbar .Youtube span {
+    font-weight: bold;
 }
 
-.animated-text {
-    /* Your existing animated text styles */
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 1s ease, transform 1s ease;
-    margin-top: 30px;
+/* ========================================= */
+/* 5. Dropdown Styling */
+/* ========================================= */
 
-    font-family: 'Cinzel', serif;
-
-    /* Optional: You can also add other font properties */
-    font-size: 3rem; /* Make it a larger size */
-    font-weight: 700; /* Use the bold weight (if available in the font) */
-    text-transform: uppercase; /* Ensure all letters are capitalized, if not already */
-
-    -webkit-user-select: none; /* For older versions of Safari */
-    -moz-user-select: none;    /* For older versions of Firefox */
-    -ms-user-select: none;     /* For older versions of Internet Explorer/Edge */
-    user-select: none;         /* Standard property for modern browsers */
-}
-
-.animated-text.loaded {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-
-
-/* --- Dropdown Container Styling --- */
 .dropdown {
     position: relative;
     display: inline-block;
     margin-left: 10px;
 }
 
-/* --- Dropdown Button Styling --- */
 .dropbtn {
     background-color: var(--button-bg-color);
     color: var(--text-color);
@@ -337,46 +311,24 @@ main {
     background-color: var(--button-hover-bg-color);
 }
 
-/* --- Dropdown Menu Content --- */
-.dropdown-content {
-    display: none; /* Hides the dropdown menu by default */
-    position: absolute;
-    background-color: #333;
-    min-width: 200px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 8px;
-    top: 100%;
-    left: 0;
-    margin-top: 5px;
-    padding: 10px 0;
-}
-
-/* --- Dropdown Menu Content --- */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
     min-width: 200px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     border-radius: 8px;
-    
-    /* The key fix: pull the dropdown up to overlap the button */
-    /* Adjust this value if needed, but -1px or -2px usually works well */
     margin-top: -1px;
     top: 100%;
     left: 0;
-    
     padding: 10px 0;
 }
 
-/* This is the hover rule */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Make sure your link styles are still there */
 .dropdown-content a {
     color: var(--text-color);
     padding: 12px 16px;
@@ -389,64 +341,230 @@ main {
     background-color: #444;
 }
 
+/* ========================================= */
+/* 6. Audio Player Styling */
+/* ========================================= */
 
-.content-section {
-    max-width: 500px; /* Adjust the width as needed */
-    margin: -100px auto; /* Adds vertical spacing and centers the section */
-    padding: 20px;
-    background-color: #222; /* A dark background to match your navbar */
-    border-radius: 12px;
+.audio-player {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: var(--button-bg-color);
+    padding: 15px 20px;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
-.content-section h2 {
-    font-family: 'Cinzel', serif; /* Use your existing fancy font */
-    font-size: 2rem;
-    color: #e0e0e0;
+.audio-player .controls {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 15px;
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.track-info #track-name {
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.album-art {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+#custom-audio-player .play-btn {
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#custom-audio-player .play-btn:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.play-btn .icon {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+.play-btn .icon.hidden {
+    display: none;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 8px;
+    background-color: #555;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background-color: var(--text-color);
+    border-radius: 4px;
+}
+
+audio {
+    display: none;
+}
+
+/* ========================================= */
+/* 7. Responsive Design */
+/* ========================================= */
+
+@media (max-width: 600px) {
+    .navbar .container {
+        flex-direction: column;
+    }
+
+    .navbar nav ul li {
+        margin: 5px 0;
+    }
+
+    .navbar button,
+    .main-button {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+
+/* popping out sections */
+
+.section-pop-out {
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* The state when the section is in view */
+.section-pop-out.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#play.catalogue {
+    /* Use flexbox to easily center and stack the items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* Defines the space between the h2, img, and button */
+    gap: 15px; 
+    
+    background-color: #333;
+    padding: 40px; /* Increased padding for a more substantial feel */
+    border-radius: 16px; /* Slightly more rounded corners */
+    max-width: 600px;
+    margin: 40px auto;
+    
+    /* Add a more exciting shadow and a subtle bounce animation on page load */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+    
+    /* Smooth transition for the hover effect */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect to make the entire section "lift up" */
+#play.catalogue:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+}
+
+#play.catalogue h2 {
+    margin: 0;
+    color: #fff;
     text-align: center;
-    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.content-section p {
-    font-family: 'Segoe UI', sans-serif; /* A clean font for reading */
-    font-size: 1.1rem;
-    color: #b0b0b0;
-    line-height: 1.6;
+#play.catalogue img {
+    height: 30px; /* Slightly larger icons */
+    transition: transform 0.3s ease;
 }
 
-
-.Come-Back {
-    max-width: 500px; /* Adjust the width as needed */
-    margin: 200px auto; /* Adds vertical spacing and centers the section */
-    padding: 20px;
-    background-color: #222; /* A dark background to match your navbar */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
+/* A slight bounce on the image when the button is hovered */
+#play.catalogue button.catalogue:hover img {
+    transform: translateY(-2px);
 }
 
-.Come-Back h2 {
-    font-family: 'Cinzel', serif; /* Use your existing fancy font */
-    font-size: 2rem;
-    color: #e0e0e0;
-    text-align: center;
-    margin-bottom: 20px;
+#play.catalogue button.catalogue {
+    padding: 20px 50px;
+    font-size: 1.5rem;
+    border: 2px solid var(--accent-color-rgba(14, 71, 33, 0.692)); /* A green border for accent */
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Increased letter spacing */
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
-.Come-Back p {
-    font-family: 'Segoe UI', sans-serif; /* A clean font for reading */
-    font-size: 1.1rem;
-    color: #b0b0b0;
-    line-height: 1.6;
+/* New hover effect for the button */
+#play.catalogue button.catalogue:hover {
+    background-color: var(--accent-color-rgba(28, 43, 25, 0));
+    color: #121212;
+    transform: scale(1.05); /* Make it slightly larger */
+    border-color: var(--accent-color-green);
 }
 
-
-
-.section-image {
-    max-width: 20%; /* Ensures the image doesn't overflow the container */
-    height: auto;     /* Maintains the image's aspect ratio */
-    display: block;   /* Makes it a block-level element */
-    border-radius: 8px; /* Adds rounded corners to match the section box */
-    margin: 0 auto 20px auto; /* Centers the image and adds space below it */
+/* New keyframe for the initial animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
