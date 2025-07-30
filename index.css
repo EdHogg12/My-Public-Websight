@@ -39,20 +39,54 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    /* This is the key. It separates the logo from the nav buttons. */
-    justify-content: space-between;
+    justify-content: space-between; /* Pushes the logo to the left, spacer to the right */
     align-items: center;
     padding: 0 20px;
 }
 
+/* This rule gives the spacer the same width as the logo to balance the layout */
+.navbar-spacer {
+    width: 10rem; /* This should match the font-size of your logo */
+}
+
+/* Update this rule in your CSS file */
 .navbar nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between; /* This is the key change */
+    align-items: center;
+    width: 100%; /* Ensures the list stretches the full width */
 }
+
+/* Update this rule in your CSS file */
+.navbar nav ul li {
+    margin: 0 10px;
+}
+
+/* Ensure the navbar-text has no button styling */
+.navbar nav ul li.navbar-text {
+    margin: 0;
+}
+
+.navbar .navbar-text a span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: 'Cinzel', serif;
+}
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    /* This is the key. It separates the logo from the nav buttons. */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
 
 .navbar nav ul li {
     margin: 0 10px;
@@ -494,67 +528,69 @@ audio {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     /* Defines the space between the h2, img, and button */
-    gap: 15px; 
-    
+    gap: 12px;
+
     background-color: #333;
-    padding: 40px; /* Increased padding for a more substantial feel */
-    border-radius: 16px; /* Slightly more rounded corners */
+    padding: 30px;
+    border-radius: 12px;
     max-width: 600px;
     margin: 40px auto;
-    
-    /* Add a more exciting shadow and a subtle bounce animation on page load */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
-    animation: fadeIn 1s ease-in-out;
+
+    /* Softer, more subtle box shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     
     /* Smooth transition for the hover effect */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover effect to make the entire section "lift up" */
+/* Hover effect to make the entire section "lift up" more subtly */
 #play.catalogue:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 #play.catalogue h2 {
     margin: 0;
     color: #fff;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    text-shadow: none;
 }
 
 #play.catalogue img {
-    height: 30px; /* Slightly larger icons */
-    transition: transform 0.3s ease;
+    height: 24px;
+    transition: transform 0.2s ease;
 }
 
-/* A slight bounce on the image when the button is hovered */
+/* No change needed for this hover effect, it's already subtle */
 #play.catalogue button.catalogue:hover img {
     transform: translateY(-2px);
 }
 
 #play.catalogue button.catalogue {
-    padding: 20px 50px;
-    font-size: 1.5rem;
-    border: 2px solid var(--accent-color-rgba(14, 71, 33, 0.692)); /* A green border for accent */
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    /* Changed the border to a neutral, subtle gray */
+    border: 1px solid rgba(224, 224, 224, 0.3);
     background-color: var(--button-bg-color);
     color: var(--text-color);
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 6px;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Increased letter spacing */
+    letter-spacing: 1px;
     transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
 }
 
 /* New hover effect for the button */
 #play.catalogue button.catalogue:hover {
-    background-color: var(--accent-color-rgba(28, 43, 25, 0));
-    color: #121212;
-    transform: scale(1.05); /* Make it slightly larger */
-    border-color: var(--accent-color-green);
+    /* The background color is now a darker gray instead of green */
+    background-color: #444; 
+    color: #fff;
+    transform: scale(1.02);
+    /* Changed the hover border color to the neutral text color */
+    border-color: var(--text-color);
 }
 
 /* New keyframe for the initial animation */
