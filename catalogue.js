@@ -23,6 +23,9 @@ function GotoMore() {
 function GotoCatalogue() {
     window.location.href = "catalogue.html";
 }
+function Gotokofi() {
+    window.location.href = "https://ko-fi.com/machinehum";
+}
 
 document.addEventListener('DOMContentLoaded', function() {
     const text = document.querySelector('.animated-text');
