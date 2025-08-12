@@ -1,139 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
-        <link rel="stylesheet" href="index.css">
-        <link rel="icon" href="logo" type="image/png"> 
-        <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
+    <title>Machine Hum - Official Website</title>
+
+    <!-- Google Fonts for a professional look -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="Home.css">
-    <link rel="icon" href="ire.png" type="image/png"> 
-</head>
-    </head>
-    <body>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
-<header class="navbar">
-    <div class="container">
-          <div class="navbar-text">
-              <a href="index.html">
-            <span>Machine Hum</span>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon (optional, but recommended) -->
+    <link rel="icon" href="ire.png" type="image/png">
+</head>
+<body>
+
+    <!-- Header and Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="artist-name">Machine Hum</a>
+            <nav class="main-nav">
+                <ul>
+                    <!-- Main Music Platforms -->
+                    <li><a href="https://open.spotify.com/artist/5oKqcFxiEL4AUNYbzBuVqI?si=dP1AouqpRpW3txo14rVcGw" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="spotify.png" alt="Spotify Logo" class="nav-icon"><span>Spotify</span></a></li>
+                    <li><a href="https://music.youtube.com/channel/UCqyMFsJ3lwVtG4-KF1g1Cig?si=UUxE1m2x-YPCpBij" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="ytmusic.png" alt="YT Music Logo" class="nav-icon"><span>YT Music</span></a></li>
+                    <li><a href="https://music.apple.com/us/artist/machine-hum/1832338799" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="applemusic.png" alt="Apple Music Logo" class="nav-icon"><span>Apple Music</span></a></li>
+                    <!-- Dropdown Menu for Socials -->
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">More ▼</span>
+                        <div class="dropdown-menu">
+                            <a href="https://www.tiktok.com/@machinehum" target="_blank" rel="noopener noreferrer"><img src="tiktok.png" alt="TikTok Logo" class="dropdown-icon">TikTok</a>
+                            <a href="https://www.instagram.com/machinehum_" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt="Instagram Logo" class="dropdown-icon">Instagram</a>
+                            <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer"><img src="soundcloud.png" alt="SoundCloud Logo" class="dropdown-icon">SoundCloud</a>
+                            <a href="https://ko-fi.com/machinehum" target="_blank" rel="noopener noreferrer"><img src="kofi.png" alt="Ko-fi Logo" class="dropdown-icon">Ko-fi</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <div class="hero-section">
+            <!-- Box 1: New Release -->
+            <a href="come-back.html" class="release-card">
+                <img src="Come Back.jpg" alt="Album art for the single Come Back">
+                <div class="release-info">
+                    <p class="release-type">New Single!</p>
+                    <h1 class="release-title">Come Back</h1>
+                    <span class="release-cta">
+                        Learn More &rarr;
+                    </span>
+                </div>
+            </a>
+
+            <!-- Box 2: Catalogue Link -->
+            <a href="catalogue.html" class="catalogue-card">
+                <img src="Come Back.jpg" alt="View full catalogue" class="catalogue-card-image">
+                <div class="catalogue-card-info">
+                    <h3>Full Catalogue</h3>
+                    <span>Explore all releases &rarr;</span>
+                </div>
             </a>
         </div>
-        <nav>
-<ul>
-<li>
-    <button type="button" class="TikTok" onclick="GotoTikTok()">
-        <span class="tiktok-highlight">
-            <img src="tiktok.png" alt="TikTok" style="height:24px; vertical-align:middle;">
-            TikTok
-        </span>
-    </button>
-</li>
-    <li>
-        <button type="button" class="Youtube" onclick="GotoYoutube()">
-            <img src="youtube.png" alt="YouTube" style="height:24px; vertical-align:middle;">
-            YouTube
-        </button>
-    </li>
-    <li>
-        <button type="button" class="Instagram" onclick="GotoInstagram()">
-            <img src="instagram.png" alt="Instagram" style="height:24px; vertical-align:middle;">
-            Instagram
-        </button>
-    </li>
+    </main>
 
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Machine Hum.</p>
+    </footer>
 
-              <li class="dropdown">
-                  <button class="dropbtn" onclick="toggleDropdown()">More ↓</button>
-
-                  <div id="moreDropdown" class="dropdown-content">
-                      <a href="#" onclick="GotoSpotify()">
-                          <img src="spotify.png" alt="Spotify" style="height:24px; vertical-align:middle;">
-                          Coming Soon...
-                      </a>
-                                                 <a href="#" onclick="GotoApplemusic()">
-                          <img src="applemusic.png" alt="applemusic" style="height:24px; vertical-align:middle;">
-                          Coming Soon...
-                      </a>
-                                                 <a href="#" onclick="Gotosoundcloud()">
-                          <img src="soundcloud.png" alt="soundcloud" style="height:24px; vertical-align:middle;">
-                          Coming Soon...
-                      </a>
-                  </div>
-              </li>
-</ul>
-        </nav>
-            <div class="navbar-spacer"></div>
-    </div>
-</header>
-
-
-
-<header class="navbar2">
-    <div class="container">
-        <nav>
-<ul>
-    <div class="text-container">
-    <h1 class="animated-text">MACHINE HUM</h1>
-</div>
-</ul>
-        </nav>
-    </div>
-</header>
-
-
-
-
-
-              <section id="play" class="catalogue section-pop-out">
-            <h2>Access Full Library Here!</h2>
-    <img src="downwards-arrow.png" alt="Catalogue" style="height:24px; vertical-align:middle;">
-        <button type="button" class="catalogue" onclick="GotoCatalogue()">
-            <img src="catalogue.png" alt="Catalogue" style="height:24px; vertical-align:middle;">
-            Catalogue
-        </button>
-        </section>
-
-
-        <section id="about-section" class="content-section section-pop-out">
-            <h2>Welcome Machine Hum</h2>
-            <p>
-                Explore the world of Machine Hum. This is a space dedicated to sharing the latest updates, music releases, and insights.
-            </p>
-
-        </section>
-
-
-
- <section id="Come-Back" class="Come-Back section-pop-out">
-     <img src="Come Back.jpg" alt="A descriptive alt text for your image" class="section-image">
-            <h2>New Realease!</h2>
-            <h2>Come Back - Single</h2>
-            <p>
-                "Come Back" is a heartfelt single aiming to capture the essence of longing and nostalgia. The song's emotive lyrics and captivating keyboard are meant to evoke feelings of loss.
-            </p>
-            <p>
-                Out soon on all platforms!
-            </p>
-        </section>
-
-
-
-    
-
-
-
-        <script src="index.js"></script>
-
-
-    </body>
+</body>
 </html>
