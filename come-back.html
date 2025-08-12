@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Hum - Come Back</title>
+
+    <!-- Google Fonts for a professional look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Cinzel:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon (optional, but recommended) -->
+    <link rel="icon" href="ire.png" type="image/png">
+</head>
+<body>
+
+    <!-- Header and Navigation Bar (No changes needed here) -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="artist-name">Machine Hum</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="https://open.spotify.com/artist/5oKqcFxiEL4AUNYbzBuVqI?si=dP1AouqpRpW3txo14rVcGw" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="spotify.png" alt="Spotify Logo" class="nav-icon"><span>Spotify</span></a></li>
+                    <li><a href="https://music.youtube.com/channel/UCqyMFsJ3lwVtG4-KF1g1Cig?si=UUxE1m2x-YPCpBij" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="ytmusic.png" alt="YT Music Logo" class="nav-icon"><span>YT Music</span></a></li>
+                    <li><a href="https://music.apple.com/us/artist/machine-hum/1832338799" target="_blank" rel="noopener noreferrer" class="nav-link"><img src="applemusic.png" alt="Apple Music Logo" class="nav-icon"><span>Apple Music</span></a></li>
+                    <li class="dropdown">
+                        <span class="nav-link dropdown-toggle">More ▼</span>
+                        <div class="dropdown-menu">
+                            <a href="https://www.tiktok.com/@machinehum" target="_blank" rel="noopener noreferrer"><img src="tiktok.png" alt="TikTok Logo" class="dropdown-icon">TikTok</a>
+                            <a href="https://www.instagram.com/machinehum_" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt="Instagram Logo" class="dropdown-icon">Instagram</a>
+                            <a href="https://soundcloud.com/" target="_blank" rel="noopener noreferrer"><img src="soundcloud.png" alt="SoundCloud Logo" class="dropdown-icon">SoundCloud</a>
+                            <a href="https://ko-fi.com/machinehum" target="_blank" rel="noopener noreferrer"><img src="kofi.png" alt="Ko-fi Logo" class="dropdown-icon">Ko-fi</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area for the Single -->
+    <main>
+        <!-- UPDATED: Container now uses a two-column layout -->
+        <div class="single-page-container">
+            
+            <!-- Column 1: Album Art -->
+            <div class="album-art-column">
+                <img src="Come Back.jpg" alt="Album art for Come Back" class="album-art-large">
+            </div>
+
+            <!-- Column 2: Track Details and Links -->
+            <div class="track-details-column">
+                <h1 class="track-title">Come Back</h1>
+                <h2 class="artist-title">Machine Hum</h2>
+
+                <div class="track-description">
+                    <p>"Come Back" is a heartfelt single aiming to capture the essence of longing and nostalgia. The song's emotive lyrics and captivating keyboard are meant to evoke feelings of loss.</p>
+                </div>
+
+                <div class="audio-player">
+                    <audio id="teaser-audio" src="come_back teaser.flac"></audio>
+                    <button id="play-pause-btn" class="player-btn">
+                        <svg class="icon-play" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                        <svg class="icon-pause" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                    </button>
+                    <div id="progress-bar-container" class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <div class="time-display">
+                        <span id="current-time">0:00</span> / <span id="total-duration">0:00</span>
+                    </div>
+                </div>
+
+                <div class="streaming-links">
+                    <h3>Stream Now!</h3>
+                    <div class="stream-button-container">
+                        <a href="https://open.spotify.com/track/5DIHUeiOV5YHuwfDBjsPoa?si=ed74f9653b1243cc" target="_blank" rel="noopener noreferrer" class="stream-button spotify-btn"><img src="spotify.png" alt="Spotify"> Spotify</a>
+                        <a href="https://music.apple.com/us/song/come-back/1832647389" target="_blank" rel="noopener noreferrer" class="stream-button apple-btn"><img src="applemusic.png" alt="Apple Music"> Apple Music</a>
+                        <a href="https://music.youtube.com/watch?v=VIMM3FHNts4&si=hNJO_S4ls8Uox2ap" target="_blank" rel="noopener noreferrer" class="stream-button ytmusic-btn"><img src="ytmusic.png" alt="YouTube Music"> YouTube Music</a>
+                        <a href="https://youtu.be/GsZ5y3szEfY" target="_blank" rel="noopener noreferrer" class="stream-button youtube-btn"><img src="youtube.png" alt="YouTube"> YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>&copy; 2024 Machine Hum.</p>
+    </footer>
+
+    <!-- JavaScript for Audio Player (No changes needed here) -->
+    <script>
+        const audio = document.getElementById('teaser-audio');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+        const playIcon = playPauseBtn.querySelector('.icon-play');
+        const pauseIcon = playPauseBtn.querySelector('.icon-pause');
+        const progressBar = document.getElementById('progress-bar');
+        const progressBarContainer = document.getElementById('progress-bar-container');
+        const currentTimeEl = document.getElementById('current-time');
+        const totalDurationEl = document.getElementById('total-duration');
+
+        function togglePlay() {
+            if (audio.paused) {
+                audio.play();
+            } else {
+                audio.pause();
+            }
+        }
+
+        function updatePlayIcon() {
+            playIcon.style.display = audio.paused ? 'block' : 'none';
+            pauseIcon.style.display = audio.paused ? 'none' : 'block';
+        }
+
+        function updateProgress() {
+            const progress = (audio.currentTime / audio.duration) * 100;
+            progressBar.style.width = `${progress}%`;
+        }
+
+        function setProgress(e) {
+            const width = this.clientWidth;
+            const clickX = e.offsetX;
+            audio.currentTime = (clickX / width) * audio.duration;
+        }
+
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        function updateTimes() {
+            currentTimeEl.textContent = formatTime(audio.currentTime);
+        }
+
+        function setDuration() {
+            totalDurationEl.textContent = formatTime(audio.duration);
+        }
+
+        playPauseBtn.addEventListener('click', togglePlay);
+        audio.addEventListener('play', updatePlayIcon);
+        audio.addEventListener('pause', updatePlayIcon);
+        audio.addEventListener('timeupdate', updateProgress);
+        audio.addEventListener('timeupdate', updateTimes);
+        audio.addEventListener('loadedmetadata', setDuration);
+        progressBarContainer.addEventListener('click', setProgress);
+    </script>
+
+</body>
+</html>
