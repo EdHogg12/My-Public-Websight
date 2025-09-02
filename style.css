@@ -139,7 +139,8 @@ body {
 }
 
 .dropdown-toggle {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     height: 24px;
 }
 
