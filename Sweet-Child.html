@@ -85,13 +85,17 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>&copy; 2024 Machine Hum.</p>
+    <div id="imageModal" class="modal">
+    <span class="close-btn">&times;</span>
+    <img class="modal-content" id="enlarged-img">
+</div>
+
+<footer class="site-footer">
+        <p>© 2024 Machine Hum.</p>
     </footer>
 
-    <!-- JavaScript for Audio Player (No changes needed here) -->
     <script>
+        // Existing Audio Player Code
         const audio = document.getElementById('teaser-audio');
         const playPauseBtn = document.getElementById('play-pause-btn');
         const playIcon = playPauseBtn.querySelector('.icon-play');
@@ -146,6 +150,30 @@
         audio.addEventListener('timeupdate', updateTimes);
         audio.addEventListener('loadedmetadata', setDuration);
         progressBarContainer.addEventListener('click', setProgress);
+
+        // NEW: Image Modal Code
+        const albumArt = document.querySelector('.album-art-large');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('enlarged-img');
+        const closeBtn = document.querySelector('.close-btn');
+
+        // When the album art is clicked, open the modal
+        albumArt.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src; // Set the modal image to the clicked image's source
+        }
+
+        // When the close button is clicked, close the modal
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the image, close the modal
+        modal.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 
 </body>
