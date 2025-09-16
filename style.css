@@ -666,6 +666,15 @@ body.discography-page main {
         padding: 2rem;
         text-align: center;
     }
+    
+    /* NEW: This is the new rule for the nav-links on mobile */
+    .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-toggle {
+        font-size: 0.8rem;
+    }
 
     .discography-card {
         flex-direction: column;
