@@ -1,5 +1,5 @@
 /* ========================================= */
-/*          GLOBAL STYLES & VARIABLES        */
+/* GLOBAL STYLES & VARIABLES        */
 /* ========================================= */
 
 :root {
@@ -33,7 +33,7 @@ body {
 }
 
 /* ========================================= */
-/*                 NAVBAR                    */
+/* NAVBAR                      */
 /* ========================================= */
 
 .navbar {
@@ -120,9 +120,43 @@ body {
     opacity: 1;
 }
 
+/* NEW: Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-primary-text);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* NEW: Mobile nav styles when active */
+.main-nav.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--color-surface);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 1rem 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.main-nav.active ul {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main-nav.active .dropdown-menu {
+    position: static;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
 
 /* ========================================= */
-/*                 DROPDOWN                  */
+/* DROPDOWN                    */
 /* ========================================= */
 
 .dropdown {
@@ -191,7 +225,7 @@ body {
 }
 
 /* ========================================= */
-/*              MAIN CONTENT                 */
+/* MAIN CONTENT                 */
 /* ========================================= */
 
 main {
@@ -209,7 +243,7 @@ body.discography-page main {
 }
 
 /* ========================================= */
-/*           HOME PAGE HERO SECTION          */
+/* HOME PAGE HERO SECTION            */
 /* ========================================= */
 
 .hero-section {
@@ -332,7 +366,7 @@ body.discography-page main {
 }
 
 /* ========================================= */
-/*          SINGLE PAGE STYLING              */
+/* SINGLE PAGE STYLING          */
 /* ========================================= */
 
 .single-page-container {
@@ -475,7 +509,7 @@ body.discography-page main {
 .stream-button.youtube-btn:hover { background-color: #FF0000; }
 
 /* ========================================= */
-/*          discography PAGE STYLING           */
+/* discography PAGE STYLING          */
 /* ========================================= */
 
 .discography-page-container {
@@ -578,7 +612,7 @@ body.discography-page main {
 }
 
 /* ========================================= */
-/*                 FOOTER                    */
+/* FOOTER                      */
 /* ========================================= */
 
 .site-footer {
@@ -589,7 +623,7 @@ body.discography-page main {
 }
 
 /* ========================================= */
-/*             RESPONSIVE DESIGN             */
+/* RESPONSIVE DESIGN                */
 /* ========================================= */
 
 @media (max-width: 900px) {
@@ -607,7 +641,20 @@ body.discography-page main {
 @media (max-width: 768px) {
     .navbar-container {
         flex-direction: column;
-        gap: 1rem;
+        align-items: flex-start;
+        gap: 0;
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .main-nav {
+        display: none;
     }
 
     .release-card {
@@ -628,6 +675,34 @@ body.discography-page main {
     .discography-card-image {
         width: 100%;
         height: 120px;
+    }
+    
+    /* NEW: Adjustments for the discography-item-card to stack */
+    .discography-item-card {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .discography-item-main-link {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .discography-item-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .discography-item-info {
+        padding: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .discography-item-links {
+        padding: 1rem 0 1.5rem;
+        justify-content: center;
+        gap: 1.25rem;
     }
 }
 
